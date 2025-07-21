@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import { Github, Calendar, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -105,15 +105,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           
           <div className="flex gap-2 pt-4">
             {project.githubUrl && (
-              <Button size="sm" variant="outline" className="flex-1">
+              <Button size="sm" variant="outline">
                 <Github className="w-4 h-4 mr-2" />
                 Kod
-              </Button>
-            )}
-            {project.liveUrl && (
-              <Button size="sm" variant="outline" className="flex-1">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Canlı
               </Button>
             )}
           </div>
