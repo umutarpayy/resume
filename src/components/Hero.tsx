@@ -13,36 +13,43 @@ const Hero = () => {
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Portfolyo
+            Portfolio
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8">
-            Yazılım Geliştirici & Teknoloji Tutkunu
+            AI Engineer & Computer Vision Specialist
           </h2>
         </div>
         
         <p className="text-lg md:text-xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Merhaba! Ben modern web teknolojileri ve kullanıcı deneyimi odaklı projeler geliştiren 
-          bir yazılım geliştiriciyim. React, TypeScript ve modern frontend teknolojileri kullanarak 
-          etkileyici dijital deneyimler yaratmayı seviyorum.
+          Hi there! I'm a passionate AI engineer specializing in <span className="text-primary font-semibold">Computer Vision</span>, 
+          <span className="text-accent font-semibold"> Natural Language Processing</span>, and 
+          <span className="text-primary font-semibold"> Machine Learning algorithms</span>. 
+          I transform complex problems into intelligent solutions using cutting-edge technologies like 
+          <span className="text-accent font-semibold"> YOLO, OpenCV, BERT, and advanced optimization algorithms</span>. 
+          From digitizing physical books to creating smart educational tools, I build systems that bridge the gap between human needs and artificial intelligence.
         </p>
         
         <div className="flex flex-wrap gap-4 justify-center mb-12">
-          <Button variant="outline" className="transition-bounce hover:glow-primary">
-            <Github className="w-5 h-5 mr-2" />
-            GitHub
-          </Button>
-          <Button variant="outline" className="transition-bounce hover:glow-accent">
-            <Linkedin className="w-5 h-5 mr-2" />
-            LinkedIn  
-          </Button>
+          <a href="https://github.com/umutarpayy" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="transition-bounce hover:glow-primary">
+              <Github className="w-5 h-5 mr-2" />
+              GitHub
+            </Button>
+          </a>
+          <a href="https://www.linkedin.com/in/umutarpayy/" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="transition-bounce hover:glow-accent">
+              <Linkedin className="w-5 h-5 mr-2" />
+              LinkedIn  
+            </Button>
+          </a>
           <Button variant="outline" className="transition-bounce hover:glow-primary">
             <Mail className="w-5 h-5 mr-2" />
-            İletişim
+            Contact
           </Button>
         </div>
         
         <div className="text-center">
-          <p className="text-muted-foreground mb-4">Aşağıda projelerimi keşfedin</p>
+          <p className="text-muted-foreground mb-4">Explore my projects below</p>
           <div className="w-8 h-8 mx-auto animate-bounce">
             <svg className="w-full h-full text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

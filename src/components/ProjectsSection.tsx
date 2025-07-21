@@ -4,13 +4,13 @@ import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("Tümü");
+  const [activeCategory, setActiveCategory] = useState("All");
   
   // Kategorileri projelerden otomatik çıkar
-  const categories = ["Tümü", ...Array.from(new Set(projects.map(p => p.category)))];
+  const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
   
   // Filtrelenmiş projeleri hesapla
-  const filteredProjects = activeCategory === "Tümü" 
+  const filteredProjects = activeCategory === "All" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
@@ -19,11 +19,11 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Projelerim
+            My Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Farklı teknolojiler ve alanlarda geliştirdiğim projeler. 
-            Her biri özenle tasarlanmış ve modern yaklaşımlarla kodlanmıştır.
+            Innovative solutions across different domains and technologies. 
+            Each project is carefully designed with modern approaches and cutting-edge implementations.
           </p>
         </div>
         
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
         {filteredProjects.length === 0 && (
           <div className="text-center py-16">
             <p className="text-muted-foreground text-lg">
-              Bu kategoride henüz proje bulunmuyor.
+              No projects found in this category yet.
             </p>
           </div>
         )}

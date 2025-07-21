@@ -37,11 +37,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const getStatusText = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'Tamamlandı';
+        return 'Completed';
       case 'in-progress':
-        return 'Devam Ediyor';
+        return 'In Progress';
       case 'planned':
-        return 'Planlandı';
+        return 'Planned';
       default:
         return status;
     }
@@ -86,14 +86,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         
         <div className="space-y-4">
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-2">Detaylı Açıklama:</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-2">Detailed Description:</h4>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {project.longDescription}
             </p>
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-2">Teknolojiler:</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-2">Technologies:</h4>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
@@ -107,7 +107,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.githubUrl && (
               <Button size="sm" variant="outline">
                 <Github className="w-4 h-4 mr-2" />
-                Kod
+                Code
               </Button>
             )}
           </div>
