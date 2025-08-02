@@ -3,8 +3,8 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20 lg:ml-80">
       <div className="max-w-4xl text-center animate-fade-in">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Portfolio
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Umut Öztürk ARPAY
           </h1>
           <h2 className="text-3xl md:text-4xl text-muted-foreground mb-8 font-light">
             Crafting AI Solutions for Tomorrow

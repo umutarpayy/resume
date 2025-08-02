@@ -35,77 +35,78 @@ const Sidebar = () => {
       <div className={`fixed left-0 top-0 h-full w-80 bg-sidebar-background/90 backdrop-blur-xl border-r border-sidebar-border z-50 flex flex-col transition-transform duration-300 lg:translate-x-0 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-      {/* Profile Section */}
-      <div className="p-8 text-center border-b border-sidebar-border/50">
-        <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-primary/20 hover:ring-primary/40 transition-all duration-300">
-          <img
-            src="/projects/profile_picture.png"
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
+        {/* Profile Section */}
+        <div className="p-8 text-center border-b border-sidebar-border/50">
+          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-primary/20 hover:ring-primary/40 transition-all duration-300">
+            <img
+              src="/projects/profile_picture.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h1 className="text-xl font-bold text-sidebar-foreground mb-1">
+            Umut Öztürk ARPAY
+          </h1>
+          <p className="text-sm text-sidebar-foreground/70 mb-4">
+            AI Engineer & Computer Vision Specialist
+          </p>
+          
+          {/* Social Links */}
+          <div className="flex gap-2 justify-center">
+            <a href="https://github.com/umutarpayy" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
+                <Github className="w-4 h-4" />
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/umutarpayy/" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
+                <Linkedin className="w-4 h-4" />
+              </Button>
+            </a>
+            <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
+              <Mail className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
-        <h1 className="text-xl font-bold text-sidebar-foreground mb-1">
-          Umut Arpay
-        </h1>
-        <p className="text-sm text-sidebar-foreground/70 mb-4">
-          AI Engineer & Computer Vision Specialist
-        </p>
-        
-        {/* Social Links */}
-        <div className="flex gap-2 justify-center">
-          <a href="https://github.com/umutarpayy" target="_blank" rel="noopener noreferrer">
-            <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
-              <Github className="w-4 h-4" />
-            </Button>
-          </a>
-          <a href="https://www.linkedin.com/in/umutarpayy/" target="_blank" rel="noopener noreferrer">
-            <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
-              <Linkedin className="w-4 h-4" />
-            </Button>
-          </a>
-          <Button size="sm" variant="ghost" className="h-8 w-8 p-0 hover:bg-sidebar-accent">
-            <Mail className="w-4 h-4" />
-          </Button>
+
+        {/* Navigation */}
+        <nav className="flex-1 p-6">
+          <div className="space-y-2">
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
+            >
+              <Home className="w-5 h-5" />
+              <span>Home</span>
+            </button>
+            
+            <button
+              onClick={() => scrollToSection('about')}
+              className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
+            >
+              <User className="w-5 h-5" />
+              <span>About</span>
+            </button>
+            
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
+            >
+              <Briefcase className="w-5 h-5" />
+              <span>Projects</span>
+            </button>
+          </div>
+        </nav>
+
+        {/* Footer */}
+        <div className="p-6 border-t border-sidebar-border/50">
+          <div className="text-xs text-sidebar-foreground/60 text-center">
+            <p>Built with React & TypeScript</p>
+            <p className="mt-1">© 2024 Umut Öztürk ARPAY</p>
+          </div>
         </div>
       </div>
-
-      {/* Navigation */}
-      <nav className="flex-1 p-6">
-        <div className="space-y-2">
-          <button
-            onClick={() => scrollToSection('hero')}
-            className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
-          >
-            <Home className="w-5 h-5" />
-            <span>Home</span>
-          </button>
-          
-          <button
-            onClick={() => scrollToSection('about')}
-            className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
-          >
-            <User className="w-5 h-5" />
-            <span>About</span>
-          </button>
-          
-          <button
-            onClick={() => scrollToSection('projects')}
-            className="w-full flex items-center gap-3 px-4 py-3 text-left text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent rounded-lg transition-all duration-200"
-          >
-            <Briefcase className="w-5 h-5" />
-            <span>Projects</span>
-          </button>
-        </div>
-      </nav>
-
-      {/* Footer */}
-      <div className="p-6 border-t border-sidebar-border/50">
-        <div className="text-xs text-sidebar-foreground/60 text-center">
-          <p>Built with React & TypeScript</p>
-          <p className="mt-1">© 2024 Umut Arpay</p>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
